@@ -1,0 +1,74 @@
+:root {
+  --ink: #0d1117;
+  --ink-raised: #161b22;
+  --ink-line: #262c36;
+  --paper: #f3efe7;
+  --paper-dim: #a9a396;
+  --amber: #e8a33d;
+  --teal: #3fa796;
+  --crimson: #c9524b;
+
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --radius: 10px;
+  --content-width: 760px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--amber);
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+}
+
+.app-shell {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 64px 24px 120px;
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    padding: 40px 18px 96px;
+  }
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
