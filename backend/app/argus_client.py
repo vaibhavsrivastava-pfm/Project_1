@@ -41,7 +41,11 @@ def generate_insights(stats: dict) -> dict:
         "clear, concise insight: one headline sentence, followed by 2-3 "
         "supporting sentences with specific numbers. Be objective -- note "
         "any important caveats (e.g. small sample size) if relevant. "
-        "Do not invent numbers not present in the input."
+        "Do not invent numbers not present in the input. "
+        "Write only the prose itself -- never include labels like "
+        "'Headline:', 'Supporting details:', 'Insight:', or similar meta-text "
+        "in your response. Do not use markdown formatting (no **bold**, no "
+        "bullet points). Just plain sentences."
     )
 
     user_content = (
